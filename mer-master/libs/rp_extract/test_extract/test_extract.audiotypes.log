@@ -1,0 +1,2 @@
+filename,decoder,samplerate (kHz),samplewidth (bit),n channels,n samples
+music/BoxCat_Games_-_10_-_Epic_Song.mp3,ffmpeg,44100,16,2,2421504
