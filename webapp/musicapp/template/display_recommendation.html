@@ -1,0 +1,37 @@
+{% extends 'recommend.html' %}
+
+{% block content2 %}
+<h2> Recommended Music</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Song id </th>
+            <th> Artist </th>
+            <th> Title </th>
+            <th> Genre </th>
+            <th>Simlarity Score (10e-6)</th>
+            <th>  </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for d in text %}
+        <tr>
+            <td> {{ d.song_id }}</td>
+            <td> {{ d.Artist }}</td>
+            <td> {{ d.Song_title }}</td>
+            <td> {{ d.Genre }}</td>
+            <td> {{d.Score}} </td>
+            <td> 
+                <a href="{{ d.music_url }}" class="btn btn-primary btn-sm" target="_blank">
+                    Play
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<img src="/showimage/" alt="">
+
+{% endblock %}

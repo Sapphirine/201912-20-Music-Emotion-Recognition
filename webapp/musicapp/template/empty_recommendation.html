@@ -1,0 +1,28 @@
+{% extends 'recommend.html' %}
+
+{% block content2 %}
+<h2> Recommended Music</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> Download </th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- {% for m in music %}
+        <tr>
+            <td> {{ m.name }}</td>
+            <td> 
+                <a href="{{ m.music.url }}" class="btn btn-primary btn-sm" target="_blank">
+                    Download mp3
+                </a>
+            </td>
+        </tr>
+        {% endfor %} -->
+    </tbody>
+</table>
+<h3> No music is recommended.</h3>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h4>Upload your music file here: </h4>
+    <form method="post" enctype="multipart/form-data" class="md-form">
+        <div class="file-field">
+        <div class="btn btn-primary btn-sm float-left">
+            {% csrf_token %}
+            <input type="file" name="document">
+        </div>
+            <button type="submit" value="Upload" name="_upload"> Upload file </button>
+            <button type="submit" value="Recommend" name="_recommend"> Generate recommendations </button>
+        </div> 
+    </form>
+    {% if url %}
+        <p align="left"> Uploaded Song: <a href="{{ url }}"> {{ url }}</a></p>
+    {% endif %}
+    
+    {% block content2 %}
+    {% endblock %}
+{% endblock %}
+

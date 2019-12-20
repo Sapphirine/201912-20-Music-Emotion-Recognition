@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> Music </h2>
+<p>
+    <a href="{% url 'upload_music' %}" class='btn btn-primary'> Upload Music</a>
+</p>
+<table class="table mb-0">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> Download </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for m in music %}
+        <tr>
+            <td> {{ m.name }}</td>
+            <td> 
+                <a href="{{ m.music.url }}" class="btn btn-primary btn-sm" target="_blank">
+                    Download mp3
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
